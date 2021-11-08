@@ -1,5 +1,5 @@
-1. Above code is code for the web application ( node js server side )
-2. The Python application ( dress recognition ) code can be found at -- https://github.com/RohitPanyam/Search-Bar-CV
+1. Above code is code for the web application seperately ( node js server side )
+2. The Python application ( dress recognition ) code can be found seperately at -- https://github.com/RohitPanyam/Search-Bar-CV
 3. The code for the Online Virtual shop, and the ( node js app + python clothes detection app ), can be found all in one place at the Link : https://vitacin-my.sharepoint.com/:f:/g/personal/aniket_vishwakarma2019_vitstudent_ac_in/EgbQIZL-KZxKk0SWzUdrxWsBPOBW7qmU9ZBJYZrAhJLi8w?e=jM95zK
 4. This link contains of the files which are correspond with the Game dev part and the website and dress recognition and recommendation part implemented together in their respective paths. ( Final folder contains the dress recognition, the MyntraFive - Copy folder contains C++ code and assets for the virtual shop )
 
