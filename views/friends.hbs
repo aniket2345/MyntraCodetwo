@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>Friends</title>
+<style>
+   * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.perfect-pixel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1169px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards {
+  padding: 120px 0 50px;
+}
+
+.cards .container::after {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.cards .card {
+  width: 33.33333333333333%;
+  margin: 0 0px 58px 0;
+  padding: 0 35px;
+  text-align: center;
+  float: left;
+}
+
+.cards .card .card-img {
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  background-image: url(http://u.cubeupload.com/ahtollika/spritesheet.png);
+}
+
+.cards .card:nth-child(1) .card-img {
+  background-position: -5px -5px;
+}
+
+.cards .card:nth-child(2) .card-img {
+  width: 73px;
+  background-position: -75px -5px;
+}
+
+.cards .card:nth-child(3) .card-img {
+  width: 41px;
+  background-position: -158px -5px;
+}
+
+.cards .card:nth-child(4) .card-img {
+  width: 56px;
+  background-position: -209px -5px;
+}
+
+.cards .card:nth-child(5) .card-img {
+  width: 72px;
+  background-position: -275px -5px;
+}
+
+.cards .card:nth-child(6) .card-img {
+  width: 79px;
+  background-position: -357px -5px;
+}
+
+
+.cards .card h3 {
+  margin: 28px 0 18px;
+  color: #2d3033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cards .card p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #6c7279;
+}
+
+
+</style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <title>Document</title>
+          <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+        </head>
+        <body>
+          
+          <img src="https://s8.hostingkartinok.com/uploads/images/2018/08/61c70fc72ece8b96a398fa97aeb8b1dd.png" alt="" class="perfect-pixel">
+          
+          <section class="cards">
+            <div class="container">
+              
+              <div class="card">
+                  <a href="profile">
+                    <div class="card-img"></div>
+                <h3 class="uppercase" id="fr1-name">Easily Customised</h3>
+                <p id="fr1-info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla</p>
+                  </a>
+                
+              </div>
+              
+              <div class="card">
+                <div class="card-img"></div>
+                <h3 class="uppercase" id="fr2-name">Add friend?</h3>
+                <button type="button" id="addfr" class="btn btn-info" onclick="myfunc()">new friend!</button>
+                <p id="fr2-info"> </p>
+              </div>
+              
+              
+              
+            </div>
+          </section>
+          
+          
+        
+        </body>
+        </html>
+<script>
+   var fr="";
+   let data = sessionStorage.getItem('username');
+   if(data=='asd'){
+       fr=["zxc"];
+   }
+   else if(data=='zxc'){
+       fr=["sdf"];
+   }
+   else if(data=='sdf'){
+       fr=["asd"];
+   }
+   let name=sessionStorage.getItem(fr[0]+'name');
+   document.getElementById("fr1-name").innerHTML =name;
+   let pno=sessionStorage.getItem(fr[0]+'mno');
+    	 let adr=sessionStorage.getItem(fr[0]+'addr');
+      let bio=sessionStorage.getItem(fr[0]+'bio');
+      document.getElementById("fr1-info").innerHTML =pno+"<br>"+adr+"<br>"+bio;
+    sessionStorage.setItem('username', fr[0]);
+    function myfunc(){
+        const newfr=prompt("Enter username of new friend: ");
+        document.getElementById("addfr").style.visibility="hidden";
+        let name=sessionStorage.getItem(newfr+'name');
+   document.getElementById("fr2-name").innerHTML =name;
+   let pno=sessionStorage.getItem(newfr+'mno');
+    	 let adr=sessionStorage.getItem(newfr+'addr');
+      let bio=sessionStorage.getItem(newfr+'bio');
+      document.getElementById("fr2-info").innerHTML ="<a href='profile'>"+pno+"<br>"+adr+"<br>"+bio+"</a>";
+    sessionStorage.setItem('username', newfr);
+
+    }
+</script>
+    </body>
+    
+</html>

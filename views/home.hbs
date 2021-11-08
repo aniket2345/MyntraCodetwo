@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>homepage</title>
+	<style type="text/css">
+		  *
+        {
+            box-sizing: border-box;
+        }
+        body
+        {
+            width: 100%;
+            margin: 0;
+        }
+        .container
+        {
+            display: flex;
+            height: 70px;
+            box-shadow: 2px 2px 29px rgb(199, 192, 192);
+            width: 100%;
+            position: fixed;
+            background-color: white;
+        }
+        .left-nav
+        {
+            display: flex;
+            flex:3;
+            justify-content:space-around ;
+        }
+        .left-nav a
+        {
+            align-self: center;
+        }
+        .search
+        {
+            flex: 1.5;
+            display: flex;
+            justify-content: center;
+        }
+        .right-nav
+        {
+            flex:1;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .logo
+        {
+            width: 4em;
+            height: auto;
+        }
+        .search div{
+            align-self: center;
+            width: 90%;
+            border: 2px solid rgb(173, 166, 166);
+            border-radius: 5px;
+        }
+        .search img
+        {
+            width: 1.4em;
+            margin-top: 5px;
+            margin-left: 4px;
+        }
+        .right-nav a div img
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20px;
+        }
+        .right-nav a
+        {
+            display: flex;
+        }
+        .right-nav a div
+        {
+            align-self:center;
+        }
+        .right-nav p{
+            margin: 0;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: unset;
+        }
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            font-family: Mukta,Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .search div input{
+            margin: 0;
+            padding: 10px;
+            width: 85%;
+            float: right;
+            border: none;
+        }
+       .mobile,.closebtn,.name
+       {
+           display: none;
+       }
+       .section-2 img,.section-3 img,.section-4 img
+        {
+            width: 16%;
+            height: auto;
+            margin-left: 3%;
+        }
+        .section-1 img
+        {
+            width: 100%;
+            height: auto;
+            margin-top: 70px;
+        }
+        @media screen and (max-width:775px)
+        {
+            .container
+            {
+                position: absolute;
+                height: 100%;
+                width: 0;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(63, 60, 60);
+                overflow: hidden;
+                transition: .5s;
+                color: white;
+            }
+            .logo,.right-nav,.search{
+                display: none;
+            }
+            .left-nav
+            {
+                position: relative;
+                top: 10%;
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin-top: 30px;
+            }
+            .container a
+            {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                display: block;
+                transition: .3s;
+            }
+            .mobile,.mobile .search
+            {
+                display:flex;
+            }
+           .container .closebtn
+            {
+                position: absolute;
+                top:20px;
+                right: 45px;
+                font-size: 80px;
+            }
+            #outside
+            {
+                margin-left: 10%;
+                width: 60%;
+                height:40px;
+            }
+            #outside div
+            {
+                height:100%;
+                overflow: hidden;
+            }
+            .name
+            {
+                font-size: 3em;
+            }
+            .section-1 img
+            {
+                margin-top: auto;
+                height: auto;
+            }
+        }
+	</style>
+</head>
+<body>
+	 <div class="mobile">
+        <span style="font-size:1.5em;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <div class="search" id="outside">
+            <div> 
+                <img class="search-logo"src="https://img.icons8.com/android/344/search.png" alt="Search icon">
+                <input type="text" name="search"  placeholder="Search for products, brands and more">
+            </div>
+        </div>
+    </div>
+    <div id="myNav" class="container">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
+        <nav class="left-nav">
+            <a href="#"><img class="logo" src="https://images.news18.com/ibnlive/uploads/2021/01/1611996262_ynt.jpeg" alt=""></a>
+            <h1 class="name"> Myntra Fashion</h1>
+            <a href="#">men</a>
+            <a href="#">women</a>
+            <a href="#">kids</a>
+            <a href="#">home & livings</a>
+            <a href="#">offers</a>
+        </nav>
+        <div class="search">
+           <div> 
+           	
+                <img class="search-logo"src="https://img.icons8.com/android/344/search.png" alt="Search icon">
+                <input type="text" name="search"  placeholder="Search for products, brands and more">
+            </div>
+        </div>
+        <h2 id="test">hello</h2>
+        <div class="right-nav">
+            <a href="profile"><div><img src="https://img.icons8.com/material-rounded/344/guest-male.png" alt="Profile"> <p>Profile</p></div></a>
+             <a href="profile-upload-single"><div><img src="https://img.icons8.com/material-rounded/344/guest-male.png" alt="Profile"> <p>Upload</p></div></a>
+            <a href="http://localhost:8000/"><div><img src="https://img.icons8.com/material-rounded/344/guest-male.png" alt="Profile"> <p>Virtual Shop</p></div></a>
+            <a href="#"><div><img src="https://img.icons8.com/material-sharp/344/like--v1.png" alt="Wishlist"> <p>Wishlist</p></div></a>
+            <a href="#"><div><img src="https://img.icons8.com/pastel-glyph/344/shopping-bag--v2.png" alt="bag"><p>Bag</p></div></a>
+        </div>
+    </div>
+    <section class="section-1">
+        <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/17/2439abfb-513f-427c-85ca-0899b7a484821616002335672-KidsFest_DK.jpg" alt="image 1">
+    </section>
+    <h2 class="heading1">deals of the day</h2>
+
+    </div>
+    <section class="section-2">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/17/15456113-b76b-4ef1-aa83-32473983ceac1615980685967-image--21-.png" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/16/751211cd-8f60-4ff0-82a7-d273195218bd1615910313724-Under1199.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/16/f13be414-fe3a-4f4c-b751-220a463b88a61615910313709-UpTo30--1-.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/16/f13be414-fe3a-4f4c-b751-220a463b88a61615910313709-UpTo30--1-.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/d43a7bbd-c140-4d0e-8999-141d5c8ce1ef1615820389558-Faces-Canada.jpg" alt="">
+    </section>
+    <h2 class="heading2">biggest deals on top brands</h2>
+    <section class="section-3">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/6e0a9fa0-9e8d-4c29-9250-995c9f1ba9331605363273176-Home---U.S.-Polo-Assn..jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/e72c82f2-cfd5-4f9a-b1b0-ba9e2b3e51251598892519506-W.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/0524cbd5-f034-4155-9e3b-336c4e530ee41605363272658-Home---Levis.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/64ecc170-58af-473f-8144-b1639895a8291598892519457-Veromodo.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/af31285e-f6a3-426e-bbea-0aedef9da17c1598892377537-Tommy-Hilfiger.jpg" alt=""> 
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/4/e6c7a718-acc0-4aa6-b04c-470ab139d66c1599230080722-F21--4-.jpg"" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/d5c17859-f366-4a65-ab42-5a066254feaa1605363272474-Home---GAP.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/5544cd64-d95b-461d-802a-8025fdfeb3331605363272844-Home---Nike.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/8d5afb84-a464-40af-9971-2e9f0827e9b71598892377591-UCB.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/581e2bf6-6d47-4a4b-a11f-43200dc9c6791598892519362-Puma.jpg" alt="">
+    </section>
+    <h2>trending in western wear</h2>
+    <section class="section-4">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/655751e9-66c3-49b5-acfc-a508068e6e581595936000398-Content-westernwear-Trends-Vibrantcolourblocks.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/20/5b3b3f9a-d893-4f15-9e1c-c7667bca41091597912691188-Content-westerncasual-trend-superhero.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d53a46d7-e8f8-4f7e-9e1a-6cb997d1a1e51597840566613-Content-westerncasual-brand-modarapidoskinnyjeans.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d53a46d7-e8f8-4f7e-9e1a-6cb997d1a1e51597840566613-Content-westerncasual-brand-modarapidoskinnyjeans.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/20/5b3b3f9a-d893-4f15-9e1c-c7667bca41091597912691188-Content-westerncasual-trend-superhero.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/f7585d6d-78ee-42bd-baf2-07eefada7fb31597840566666-Content-westerncasual-color-moss.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d7f59b96-8e15-470e-a47b-5d5005e4273f1597840566776-Content-westerncasual-mostselling-modblocking.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/8116410f-af2c-4980-95ef-04a4162092491597840566722-Content-westerncasual-color-preppyred.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/580b804c-c529-421c-b0be-b311cab6e10b1598030134933-Content-mostselling-casualwear-Normalisboring.jpg" alt="">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/a6d9d467-d37e-4428-b2dd-a9f45756c1fc1595936000278-Content-westernwear-lifestyle-Ecovero.jpg" alt="">
+    </section>
+    <script type="text/javascript">
+    	let data = sessionStorage.getItem('username');
+    	document.getElementById("test").innerHTML = "hello,"+data;
+    	  function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }  function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+</html>
